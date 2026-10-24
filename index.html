@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BSL Tracker</title>
+  <meta name="description" content="Log meals and blood glucose in seconds, and see which foods spike you.">
+  <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="BSL">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Log</h1>
+    <span id="sub" class="muted"></span>
+  </header>
+
+  <main id="view" aria-live="polite"></main>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#log" data-tab="log">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      <span>Log</span>
+    </a>
+    <a href="#days" data-tab="days">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-6 4 3 5-7 4 4"/></svg>
+      <span>Days</span>
+    </a>
+    <a href="#insights" data-tab="insights">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>
+      <span>Insights</span>
+    </a>
+    <a href="#more" data-tab="more">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg>
+      <span>More</span>
+    </a>
+  </nav>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="sheet" aria-label="Details"></dialog>
+
+  <noscript>BSL Tracker needs JavaScript.</noscript>
+</body>
+</html>
